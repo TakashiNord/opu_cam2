@@ -1,0 +1,212 @@
+
+typedef enum
+{
+    UF_PARAM_feed_none = 0,
+    UF_PARAM_feed_per_minute = 1,
+    UF_PARAM_feed_per_revolution = 2
+
+} UF_PARAM_feed_unit_t;
+
+typedef enum
+{
+    UF_PARAM_spindle_mode_rpm = 0,
+    UF_PARAM_spindle_mode_css = 1,
+    UF_PARAM_spindle_mode_none = 2
+
+} UF_PARAM_spindle_mode_t;
+
+typedef struct UF_PARAM_feedrate_s
+{
+    UF_PARAM_feed_unit_t unit;       /* unit of feedrate = 0 (none), = 1 */
+    double value;     /* value of feedrate */
+    short color;      /* color of feedrate.  For possible color value, refer to uf_obj.h */
+
+} UF_PARAM_feedrate_t;
+
+
+
+/* UF_PARAM_FEED_SIDE_CUT
+ *
+ *  Description:
+ *  This index contains a pointer to side cut feedrate structure
+ *
+ *  Type: UF_PARAM_type_pointer
+ *
+ *  Name: Feed Side Cut
+ *  Variable Name: <prefix>_feed_side_cut
+ *
+ *  Possible Values: UF_PARAM_feedrate_t
+ *
+ * 
+ */
+#define UF_PARAM_FEED_SIDE_CUT   9  /* UF_PARAM_type_pointer */
+
+
+/* UF_PARAM_FEED_RAPID
+ *
+ *  Description:
+ *  This index contains a pointer to rapid feedrate structure
+ *
+ *  Type: UF_PARAM_type_pointer
+ *
+ *  Name: Feed Rapid
+ *  Variable Name: <prefix>_feed_rapid
+ *
+ *  Possible Values: UF_PARAM_feedrate_t
+ *
+ * 
+ */
+#define UF_PARAM_FEED_RAPID   10  /* UF_PARAM_type_pointer */
+
+
+/* UF_PARAM_FEED_ENGAGE
+ *
+ *  Description:
+ *  This index contains a pointer to engage feedrate structure
+ *
+ *  Type: UF_PARAM_type_pointer
+ *
+ *  Name: Feed Engage
+ *  Variable Name: <prefix>_feed_engage
+ *
+ *  Possible Values: UF_PARAM_feedrate_t
+ *
+ * 
+ */
+#define UF_PARAM_FEED_ENGAGE   11  /* UF_PARAM_type_pointer */
+
+
+/* UF_PARAM_FEED_RETRACT
+ *
+ *  Description:
+ *  This index contains a pointer to retract feedrate structure
+ *
+ *  Type: UF_PARAM_type_pointer
+ *
+ *  Name: Feed Retract
+ *  Variable Name: <prefix>_feed_retract
+ *
+ *  Possible Values: UF_PARAM_feedrate_t
+ *
+ * 
+ */
+#define UF_PARAM_FEED_RETRACT   12  /* UF_PARAM_type_pointer */
+
+
+/* UF_PARAM_FEED_APPROACH
+ *
+ *  Description:
+ *  This index contains a pointer to approach feedrate structure
+ *
+ *  Type: UF_PARAM_type_pointer
+ *
+ *  Name: Feed Approach
+ *  Variable Name: <prefix>_feed_approach
+ *
+ *  Possible Values: UF_PARAM_feedrate_t
+ *
+ * 
+ */
+#define UF_PARAM_FEED_APPROACH   13  /* UF_PARAM_type_pointer */
+
+
+/* UF_PARAM_FEED_DEPARTURE
+ *
+ *  Description:
+ *  This index contains a pointer to departure feedrate structure
+ *
+ *  Type: UF_PARAM_type_pointer
+ *
+ *  Name: Feed Departure
+ *  Variable Name: <prefix>_feed_departure
+ *
+ *  Possible Values: UF_PARAM_feedrate_t
+ *
+ * 
+ */
+#define UF_PARAM_FEED_DEPARTURE   14  /* UF_PARAM_type_pointer */
+
+
+/* UF_PARAM_FEED_RETURN
+ *
+ *  Description:
+ *  This index contains a pointer to return feedrate structure
+ *
+ *  Type: UF_PARAM_type_pointer
+ *
+ *  Name: Feed Return
+ *  Variable Name: <prefix>_feed_return
+ *
+ *  Possible Values: UF_PARAM_feedrate_t
+ *
+ * 
+ */
+#define UF_PARAM_FEED_RETURN   15  /* UF_PARAM_type_pointer */
+
+
+/* UF_PARAM_FEED_TRAVERSAL
+ *
+ *  Description:
+ *  This index contains a pointer to traversal feedrate structure
+ *
+ *  Type: UF_PARAM_type_pointer
+ *
+ *  Name: Feed Traversal
+ *  Variable Name: <prefix>_feed_traversal
+ *
+ *  Possible Values: UF_PARAM_feedrate_t
+ *
+ * 
+ */
+#define UF_PARAM_FEED_TRAVERSAL   16  /* UF_PARAM_type_pointer */
+
+
+/* UF_PARAM_FEED_CUT
+ *
+ *  Description:
+ *  This index contains a pointer to cut feedrate structure
+ *
+ *  Type: UF_PARAM_type_pointer
+ *
+ *  Name: Feed Cut
+ *  Variable Name: <prefix>_feed_cut
+ *
+ *  Possible Values: UF_PARAM_feedrate_t
+ *
+ * 
+ */
+#define UF_PARAM_FEED_CUT   17  /* UF_PARAM_type_pointer */
+
+
+/* UF_PARAM_FEED_FIRST_CUT
+ *
+ *  Description:
+ *  This index contains a pointer to first cut feedrate structure
+ *
+ *  Type: UF_PARAM_type_pointer
+ *
+ *  Name: Feed First_Cut
+ *  Variable Name: <prefix>_feed_first_cut
+ *
+ *  Possible Values: UF_PARAM_feedrate_t
+ *
+ * 
+ */
+#define UF_PARAM_FEED_FIRST_CUT   18  /* UF_PARAM_type_pointer */
+
+
+/* UF_PARAM_FEED_STEPOVER
+ *
+ *  Description:
+ *  This index contains a pointer to stepover feedrate structure
+ *
+ *  Type: UF_PARAM_type_pointer
+ *
+ *  Name: Feed Stepover
+ *  Variable Name: <prefix>_feed_stepover
+ *
+ *  Possible Values: UF_PARAM_feedrate_t
+ *
+ * 
+ */
+#define UF_PARAM_FEED_STEPOVER   19  /* UF_PARAM_type_pointer */
